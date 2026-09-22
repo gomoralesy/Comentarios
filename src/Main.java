@@ -1,16 +1,11 @@
 public static void main(String[] args) {
-    calculadoraNotas estudianteAprobado = new calculadoraNotas("Gonzalo", 5.7, 6.4, 6.9);
-    double promedio = estudianteAprobado.calcularPromedio();
-    System.out.println("Nombre: "+ estudianteAprobado.getNombre());
-    System.out.println("Nota 1: "+estudianteAprobado.getNota1());
-    System.out.println("Nota 2: "+estudianteAprobado.getNota2());
-    System.out.println("Nota 3: "+estudianteAprobado.getNota3());
-    System.out.println("Nota final: "+promedio);
+    calculadoraNotas calculo = new calculadoraNotas();
 
-    //Probamos el método estaAprobado con promedio final para verificar si el alumno aprueba o no
+    double promedio = calculo.calcularPromedio(6.0, 6.5, 6.8);
+    boolean aprobado = calculo.estaAprobado(promedio);
 
-    boolean aprobado = estudianteAprobado.estaAprobado(promedio);
-    System.out.println("Aprobadoo: "+aprobado);
+    System.out.println("Promedio final: "+promedio);
+    System.out.println("Aprobado: "+aprobado);
 }
 
 
