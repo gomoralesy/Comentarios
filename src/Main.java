@@ -1,22 +1,14 @@
-import java.util.Scanner;
-void main() {
-    Scanner sc = new Scanner(System.in);
-    double disc = 0.2;
-    double precio = 50000;
+public static void main(String[] args) {
+    Estudiante estudiante1 = new Estudiante("Gonzalo", "Morales", 30, 5.6);
+    System.out.println("Nombre: "+ estudiante1.getNombre());
+    System.out.println("Apellido: "+ estudiante1.getApellido());
+    System.out.println("Edad: "+ estudiante1.getEdad());
+    System.out.println("Nota final: "+ estudiante1.getNotaFinal());
 
-    //Variable edad para evaluar descuento
-    System.out.println("Ingrese su edad: ");
-    int edad = sc.nextInt();
+    // Comentario: Probaremos el método estaAprobado con la nota del estudiante
 
-    /*
-    Condición utilizando edad para saber si el sistema
-    aplica el descuento
-     */
-    if (edad >= 30) {
-        double total = precio - (precio * disc);
-        System.out.println("Descuento aplicado: " + total);
-    } else {
-        System.out.println("No aplica descuento.");
-    }
-
+    boolean aprobado = estudiante1.estaAprobado(estudiante1.getNotaFinal());
+    System.out.println("Aprobado: "+ aprobado);
 }
+
+
