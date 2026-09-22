@@ -50,7 +50,7 @@ public class calculadoraNotas {
 
     public double calcularPromedio() {
         //Suma las 3 notas y divide por el total de notas
-        return (nota1 + nota2 + nota3)/3;
+        return (nota1 + nota2 + nota3)/3.0;
 
     }
 
